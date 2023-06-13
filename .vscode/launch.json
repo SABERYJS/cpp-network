@@ -1,0 +1,111 @@
+{
+    "configurations": [
+        {
+            "name": "ssl_server",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ssl_server",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "testwebsocket",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/websocket/testwebsocket",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "chatservermain",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/chatserver/servermain",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "parseproto",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/rpc/parser",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "rpcserver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/rpc/rpcserver",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [
+                "--config=/data/cimserver/rpc/config.json"
+            ],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "rpcclient",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/rpc/rpcclient",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        },
+        {
+            "name": "pooltest",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/test/pooltest",
+            "cwd": "${fileDirname}",
+            "miDebuggerPath": "gdb",
+            "args": [],
+            "environment": [
+                {
+                    "name": "GTEST_COLOR",
+                    "value": "0"
+                }
+            ]
+        }
+    ]
+}

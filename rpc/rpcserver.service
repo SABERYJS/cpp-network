@@ -1,0 +1,16 @@
+[Unit]
+Description=rpcserver service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+LimitNOFILE=100000
+Restart=always
+RestartSec=1
+ExecReload=/bin/kill -s HUP $MAINPID
+User=root
+Environment=""
+ExecStart=/data/cimserver/build/rpc/rpcserver --config=/data/cimserver/rpc/config.json
+
+[Install]
+WantedBy=multi-user.target

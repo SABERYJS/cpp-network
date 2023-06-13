@@ -1,0 +1,42 @@
+syntax = "proto3"; // 指定proto版本
+package rpc;       // 指定包名
+option go_package = "martinye.com/micro/common/proto/rpc";
+
+message GetTimeReq { int64 cTime = 1; }
+
+message GetTimeResp {
+  int32 ret = 1;
+  int64 time = 2;
+}
+
+message RequestAuth {
+  int32 uid = 1;
+  string password = 2;
+}
+
+message SendChatMsg {
+  int32 peer = 1;
+  ChatMsgType msgType = 2;
+  string picUrl = 3;
+  string text = 4;
+  string videoUrl = 5;
+  string voiceUrl = 6;
+}
+
+enum ChatMsgType {
+  ChatMsgTypePic = 0;
+  ChatMsgTypeText = 1;
+  ChatMsgTypeVideo = 2;
+  ChatMsgTypeVoice = 3;
+}
+
+message Message {
+  MessageType mType = 1;
+  RequestAuth rAuth = 2;
+  SendChatMsg sMsg = 3;
+}
+
+enum MessageType {
+  MessageTypeAuth = 0;
+  MessageTypeChatMsg = 1;
+}

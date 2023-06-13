@@ -1,0 +1,3 @@
+service NormalService{
+    rpc GetTime(GetTimeReq)returns(GetTimeResp){};
+}
